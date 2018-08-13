@@ -15,20 +15,6 @@ function setClock() {
 
     var date = new Date();
 
-    //date = new Date(date.getTime() + TotalAddedSeconds * 1000);
-    //TotalAddedSeconds = TotalAddedSeconds + 1;
-
-    //if (typeof svgClock === 'undefined') {
-    //    svgClock = document.getElementById("svgclock");
-    //    radius = svgClock.getBBox().width / 2;
-    //    radius90 = radius * 0.81;
-    //    seconds = document.getElementById("GaugeSecond");
-    //    minutes = document.getElementById("GaugeMinute");
-    //    hours = document.getElementById("GaugeHour");
-    //}
-
-
-
         var s = (date.getUTCSeconds() + date.getMilliseconds() / 1000);
         var m = date.getUTCMinutes() + s / 60;
         var h = date.getUTCHours() - 5;
@@ -193,14 +179,14 @@ window.JsInterop2 = {
 
 
 
-        
+
         svgClock = document.getElementById("svgclock");
         radius = svgClock.getBBox().width / 2;
         radius90 = radius * 0.81;
         seconds = document.getElementById("GaugeSecond");
         minutes = document.getElementById("GaugeMinute");
         hours = document.getElementById("GaugeHour");
-        
+
 
         setInterval("setClock()", 200);
 

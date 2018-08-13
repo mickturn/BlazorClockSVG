@@ -81,8 +81,6 @@ namespace BlazorClockSvgComponent
                     fr = "50%",
                 };
 
-
-
                 _radialGradient.Children.Add(new stop
                 {
                     stop_color = "blue",
