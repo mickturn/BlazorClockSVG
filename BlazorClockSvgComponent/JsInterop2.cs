@@ -10,9 +10,9 @@ namespace BlazorClockSvgComponent
     public static class JsInterop2
     {
 
-        public static bool Run(TransferParameters _params)
+        public static Task<bool> Run(TransferParameters _params)
         {
-            return (JSRuntime.Current as IJSInProcessRuntime).Invoke<bool>(
+            return JSRuntime.Current.InvokeAsync<bool>(
                 "JsInterop2.Run", _params);
         }
     }
